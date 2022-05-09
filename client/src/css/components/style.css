@@ -1,0 +1,16 @@
+@import './variables.css';
+@import './home.css';
+@import './nav-bar.css';
+@import './header.css';
+@import './featured.css';
+@import './propertyLists.css';
+@import './featuredProperties.css';
+@import './mailLists.css';
+@import './footer.css';
+li {
+  list-style: none;
+}
+
+/*# sourceMappingURL=style.scss.map */
+
+/*# sourceMappingURL=style.css.map */

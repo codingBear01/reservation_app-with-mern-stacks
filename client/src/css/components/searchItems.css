@@ -1,0 +1,94 @@
+/* alignment */
+.searchItem .siDetails .siRating, .searchItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchItem .siDetails .siDetailTexts, .searchItem .siDetails, .searchItem .siDesc {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchItem {
+  margin-bottom: 20px;
+  padding: 10px;
+  gap: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.searchItem .siImg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.searchItem .siDesc {
+  flex: 2;
+  gap: 10px;
+}
+.searchItem .siDesc .siTitle {
+  font-size: 20px;
+  color: var(--lightBlue);
+}
+.searchItem .siDesc .siDistance,
+.searchItem .siDesc .siFeatures {
+  font-size: 12px;
+}
+.searchItem .siDesc .siTaxiOp {
+  padding: 3px;
+  max-width: max-content;
+  border-radius: 5px;
+  background-color: var(--basicGreen);
+  font-size: 12px;
+  color: var(--fontColor);
+}
+.searchItem .siDesc .siSubtitle {
+  font-size: 12px;
+  font-weight: bold;
+}
+.searchItem .siDesc .siCancelOp {
+  font-size: 12px;
+  color: var(--basicGreen);
+  font-weight: bold;
+}
+.searchItem .siDesc .siCancelOpSubtitle {
+  font-size: 12px;
+  color: var(--basicGreen);
+}
+.searchItem .siDetails {
+  flex: 1;
+  justify-content: space-between;
+}
+.searchItem .siDetails .siRating > span {
+  font-weight: 500;
+}
+.searchItem .siDetails .siRating > button {
+  padding: 5px;
+  border: none;
+  background-color: var(--basicBlue);
+  color: var(--fontColor);
+  font-weight: bold;
+}
+.searchItem .siDetails .siDetailTexts {
+  gap: 5px;
+  text-align: right;
+}
+.searchItem .siDetails .siDetailTexts .siPrice {
+  font-size: 24px;
+}
+.searchItem .siDetails .siDetailTexts .siTaxOp {
+  font-size: 12px;
+  color: var(--basicGrey);
+}
+.searchItem .siDetails .siDetailTexts .siCheckButton {
+  padding: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--lightBlue);
+  font-weight: bold;
+  color: var(--fontColor);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=searchItems.scss.map */
+
+/*# sourceMappingURL=searchItems.css.map */

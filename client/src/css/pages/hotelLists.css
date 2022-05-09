@@ -1,0 +1,86 @@
+/* alignment */
+.listContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.listContainer .listWrapper .listSearch .lsItem .lsOptions .lsOptionItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listContainer .listWrapper .listSearch .lsItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.listContainer {
+  margin-top: 20px;
+}
+.listContainer .listWrapper {
+  display: flex;
+  width: 100%;
+  max-width: var(--maxWidth);
+  gap: 20px;
+}
+.listContainer .listWrapper .listSearch {
+  position: sticky;
+  top: 10px;
+  flex: 1;
+  height: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--basicYellow);
+}
+.listContainer .listWrapper .listSearch .lsTitle {
+  font-size: 20px;
+  color: var(--basicGrey);
+  margin-bottom: 10px;
+}
+.listContainer .listWrapper .listSearch .lsItem {
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.listContainer .listWrapper .listSearch .lsItem .lsOptions {
+  padding: 10px;
+}
+.listContainer .listWrapper .listSearch .lsItem .lsOptions .lsOptionItem {
+  margin-bottom: 10px;
+  color: var(--basicGrey);
+  font-size: 12px;
+}
+.listContainer .listWrapper .listSearch .lsItem .lsOptions .lsOptionItem .lsOptionInput {
+  width: 50px;
+}
+.listContainer .listWrapper .listSearch .lsItem > label {
+  font-size: 12px;
+}
+.listContainer .listWrapper .listSearch .lsItem > input {
+  height: 30px;
+  padding: 5px;
+  border: none;
+}
+.listContainer .listWrapper .listSearch .lsItem > span {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+.listContainer .listWrapper .listSearch > button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: var(--lightBlue);
+  font-weight: 500;
+  color: var(--fontColor);
+  cursor: pointer;
+}
+.listContainer .listWrapper .listResult {
+  flex: 3;
+}
+
+/*# sourceMappingURL=hotelLists.scss.map */
+
+/*# sourceMappingURL=hotelLists.css.map */

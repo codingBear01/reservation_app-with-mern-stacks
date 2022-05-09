@@ -1,0 +1,33 @@
+/* alignment */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar {
+  height: 50px;
+  background-color: var(--basicBlue);
+}
+.navBar .navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--maxWidth);
+  color: var(--fontColor);
+}
+.navBar .navContainer .logo {
+  font-weight: 500;
+}
+.navBar .navContainer .navItems .navBtn {
+  margin-left: 20px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  color: var(--basicBlue);
+}
+
+/*# sourceMappingURL=nav-bar.scss.map */
+
+/*# sourceMappingURL=nav-bar.css.map */

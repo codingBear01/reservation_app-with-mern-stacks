@@ -1,0 +1,24 @@
+/* import */
+@import './variables.css';
+@import './var.scss';
+
+/* pages */
+@import './pages/home.css';
+@import './pages/hotelLists.css';
+@import './pages/hotel.css';
+
+/* components */
+@import './components/nav-bar.css';
+@import './components/header.css';
+@import './components/featured.css';
+@import './components/propertyLists.css';
+@import './components/featuredProperties.css';
+@import './components/mailLists.css';
+@import './components/searchItems.css';
+@import './components/footer.css';
+
+li {
+  list-style: none;
+}
+
+/*# sourceMappingURL=style.scss.map */

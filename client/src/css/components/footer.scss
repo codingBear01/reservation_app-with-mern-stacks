@@ -1,0 +1,33 @@
+/* alignment */
+%spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  width: 100%;
+  max-width: var(--maxWidth);
+  font-size: 12px;
+
+  .fLists {
+    @extend %spaceBetween;
+    width: 100%;
+    margin-bottom: 50px;
+
+    .fList {
+      padding: 0;
+
+      .fListItem {
+        margin-bottom: 10px;
+        color: var(--basicBlue);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .fText {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=footer.scss.map */

@@ -1,0 +1,55 @@
+/* alignment */
+%flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+%spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fp {
+  @extend %spaceBetween;
+  width: 100%;
+  max-width: var(--maxWidth);
+  gap: 20px;
+
+  .fpItem {
+    @extend %flexCol;
+    flex: 1;
+    gap: 10px;
+    cursor: pointer;
+
+    .fpImg {
+      width: 100%;
+    }
+
+    .fpName {
+      font-weight: bold;
+    }
+
+    .fpCity {
+      font-weight: 300;
+    }
+
+    .fpPrice {
+      font-weight: 500;
+    }
+
+    .fpRating > button {
+      margin-right: 10px;
+      padding: 3px;
+      border: none;
+      background-color: var(--basicBlue);
+      color: var(--fontColor);
+      font-weight: bold;
+    }
+
+    .fpRating > span {
+      font-size: 14px;
+    }
+  }
+}
+/*# sourceMappingURL=featuredProperties.scss.map */

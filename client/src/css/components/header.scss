@@ -1,0 +1,137 @@
+/* alignment */
+%alignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--basicBlue);
+  color: var(--fontColor);
+
+  .headerContainer.listMode {
+    margin: 20px 0px 0px 0px;
+  }
+
+  .headerContainer {
+    width: 100%;
+    max-width: var(--maxWidth);
+    margin: 20px 0px 100px 0px;
+
+    .headerList {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 50px;
+
+      .headerListItem {
+        @extend %alignCenter;
+        gap: 10px;
+      }
+
+      .headerListItem.active {
+        border: 1px solid var(--activeColor);
+        padding: 10px;
+        border-radius: 20px;
+      }
+    }
+
+    .headerDesc {
+      margin: 20px 0px;
+    }
+
+    .headerBtn {
+      padding: 10px;
+      border: none;
+      background-color: var(--lightBlue);
+      color: var(--fontColor);
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .headerSearch {
+      position: absolute;
+      bottom: -25px;
+      @extend %alignCenter;
+      justify-content: space-around;
+      padding: 10px 0px;
+      width: 100%;
+      max-width: var(--maxWidth);
+      height: 30px;
+      border: 3px solid var(--basicYellow);
+      border-radius: 5px;
+      background-color: var(--headerBgC);
+
+      .headerSearchItem {
+        @extend %alignCenter;
+        gap: 10px;
+
+        .headerIcon {
+          color: var(--headerC);
+        }
+
+        .headerSearchInput {
+          border: none;
+          outline: none;
+        }
+
+        .headerSearchTxt {
+          color: var(--headerC);
+          cursor: pointer;
+        }
+
+        .date {
+          position: absolute;
+          top: 50px;
+          z-index: 1;
+        }
+      }
+
+      .options {
+        position: absolute;
+        top: 50px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+        background-color: white;
+        color: var(--headerC);
+        z-index: 1;
+
+        .optionItem {
+          width: 200px;
+          display: flex;
+          justify-content: space-between;
+          margin: 10px;
+
+          .optionCnt {
+            @extend %alignCenter;
+            gap: 10px;
+            font-size: 12px;
+            color: black;
+
+            span {
+              width: 30px;
+              text-align: center;
+            }
+
+            .optionCntBtn {
+              width: 30px;
+              height: 30px;
+              background-color: white;
+              border: 1px solid var(--lightBlue);
+              color: var(--lightBlue);
+              cursor: pointer;
+            }
+
+            .optionCntBtn:disabled {
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*# sourceMappingURL=header.scss.map */

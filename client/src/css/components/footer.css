@@ -1,0 +1,30 @@
+/* alignment */
+.footer .fLists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  width: 100%;
+  max-width: var(--maxWidth);
+  font-size: 12px;
+}
+.footer .fLists {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.footer .fLists .fList {
+  padding: 0;
+}
+.footer .fLists .fList .fListItem {
+  margin-bottom: 10px;
+  color: var(--basicBlue);
+  cursor: pointer;
+}
+.footer .fText {
+  text-align: center;
+}
+
+/*# sourceMappingURL=footer.scss.map */
+
+/*# sourceMappingURL=footer.css.map */

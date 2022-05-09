@@ -1,0 +1,49 @@
+/* alignment */
+.fp .fpItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.fp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fp {
+  width: 100%;
+  max-width: var(--maxWidth);
+  gap: 20px;
+}
+.fp .fpItem {
+  flex: 1;
+  gap: 10px;
+  cursor: pointer;
+}
+.fp .fpItem .fpImg {
+  width: 100%;
+}
+.fp .fpItem .fpName {
+  font-weight: bold;
+}
+.fp .fpItem .fpCity {
+  font-weight: 300;
+}
+.fp .fpItem .fpPrice {
+  font-weight: 500;
+}
+.fp .fpItem .fpRating > button {
+  margin-right: 10px;
+  padding: 3px;
+  border: none;
+  background-color: var(--basicBlue);
+  color: var(--fontColor);
+  font-weight: bold;
+}
+.fp .fpItem .fpRating > span {
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=featuredProperties.scss.map */
+
+/*# sourceMappingURL=featuredProperties.css.map */

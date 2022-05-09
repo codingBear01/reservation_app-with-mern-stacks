@@ -1,0 +1,34 @@
+/* alignment */
+.pLists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pLists {
+  width: 100%;
+  max-width: var(--maxWidth);
+  gap: 20px;
+}
+.pLists .pListsItem {
+  flex: 1;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.pLists .pListsItem .pListsImg {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.pLists .pListsItem .pListsTitles > h1 {
+  font-size: 18px;
+}
+.pLists .pListsItem .pListsTitles > h2 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=propertyLists.scss.map */
+
+/*# sourceMappingURL=propertyLists.css.map */

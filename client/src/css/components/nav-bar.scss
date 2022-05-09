@@ -1,0 +1,37 @@
+/* alignment */
+%alignCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar {
+  height: 50px;
+  background-color: var(--basicBlue);
+  @extend %alignCenter;
+
+  .navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--maxWidth);
+    color: var(--fontColor);
+
+    .logo {
+      font-weight: 500;
+    }
+
+    .navItems {
+      .navBtn {
+        margin-left: 20px;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        color: var(--basicBlue);
+      }
+    }
+  }
+}
+
+/*# sourceMappingURL=nav-bar.scss.map */

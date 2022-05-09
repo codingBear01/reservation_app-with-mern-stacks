@@ -1,0 +1,110 @@
+@import '../var.scss';
+
+.hotelContainer {
+  @extend %flexCol;
+  align-items: center;
+  margin-top: 20px;
+
+  .hotelWrapper {
+    position: relative;
+    @extend %flexCol;
+    width: 100%;
+    max-width: var(--maxWidth);
+    gap: 10px;
+
+    .bookNow {
+      position: absolute;
+      top: 10;
+      right: 0;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--lightBlue);
+      color: var(--fontColor);
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hotelTitle {
+      font-size: 24px;
+    }
+
+    .hotelAddress {
+      @extend %alignCenter;
+      font-size: 12px;
+      gap: 10px;
+    }
+
+    .hotelDistance {
+      color: var(--lightBlue);
+      font-weight: 500;
+    }
+
+    .hotelPriceHighlight {
+      color: var(--basicGreen);
+      font-weight: 500;
+    }
+
+    .hotelImgs {
+      @extend %spaceBetween;
+      flex-wrap: wrap;
+
+      .hotelImgWrapper {
+        width: 33%;
+
+        .hotelImg {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .hotelDetails {
+      @extend %spaceBetween;
+      margin-top: 20px;
+      gap: 20px;
+
+      .hotelDetailsTxt {
+        flex: 3;
+
+        .hotelDesc {
+          margin-top: 20px;
+          font-size: 14px;
+        }
+      }
+
+      .hotelDetailsPrice {
+        @extend %flexCol;
+        flex: 1;
+        padding: 20px;
+        gap: 20px;
+        background-color: #ebf3ff;
+      }
+
+      .hotelDetailsPrice > h1 {
+        font-size: 18px;
+        color: var(--basicGrey);
+      }
+
+      .hotelDetailsPrice > span {
+        font-size: 14px;
+      }
+
+      .hotelDetailsPrice > h2 {
+        font-weight: 300;
+      }
+
+      .hotelDetailsPrice > button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--lightBlue);
+        color: var(--fontColor);
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*# sourceMappingURL=hotel.scss.map */

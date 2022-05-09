@@ -1,0 +1,104 @@
+/* alignment */
+.hotelContainer .hotelWrapper .hotelAddress {
+  display: flex;
+  align-items: center;
+}
+
+.hotelContainer .hotelWrapper .hotelDetails, .hotelContainer .hotelWrapper .hotelImgs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotelContainer .hotelWrapper .hotelDetails .hotelDetailsPrice, .hotelContainer .hotelWrapper, .hotelContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=var.scss.map */
+.hotelContainer {
+  align-items: center;
+  margin-top: 20px;
+}
+.hotelContainer .hotelWrapper {
+  position: relative;
+  width: 100%;
+  max-width: var(--maxWidth);
+  gap: 10px;
+}
+.hotelContainer .hotelWrapper .bookNow {
+  position: absolute;
+  top: 10;
+  right: 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--lightBlue);
+  color: var(--fontColor);
+  font-weight: bold;
+  cursor: pointer;
+}
+.hotelContainer .hotelWrapper .hotelTitle {
+  font-size: 24px;
+}
+.hotelContainer .hotelWrapper .hotelAddress {
+  font-size: 12px;
+  gap: 10px;
+}
+.hotelContainer .hotelWrapper .hotelDistance {
+  color: var(--lightBlue);
+  font-weight: 500;
+}
+.hotelContainer .hotelWrapper .hotelPriceHighlight {
+  color: var(--basicGreen);
+  font-weight: 500;
+}
+.hotelContainer .hotelWrapper .hotelImgs {
+  flex-wrap: wrap;
+}
+.hotelContainer .hotelWrapper .hotelImgs .hotelImgWrapper {
+  width: 33%;
+}
+.hotelContainer .hotelWrapper .hotelImgs .hotelImgWrapper .hotelImg {
+  width: 100%;
+  object-fit: cover;
+}
+.hotelContainer .hotelWrapper .hotelDetails {
+  margin-top: 20px;
+  gap: 20px;
+}
+.hotelContainer .hotelWrapper .hotelDetails .hotelDetailsTxt {
+  flex: 3;
+}
+.hotelContainer .hotelWrapper .hotelDetails .hotelDetailsTxt .hotelDesc {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.hotelContainer .hotelWrapper .hotelDetails .hotelDetailsPrice {
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+  background-color: #ebf3ff;
+}
+.hotelContainer .hotelWrapper .hotelDetails .hotelDetailsPrice > h1 {
+  font-size: 18px;
+  color: var(--basicGrey);
+}
+.hotelContainer .hotelWrapper .hotelDetails .hotelDetailsPrice > span {
+  font-size: 14px;
+}
+.hotelContainer .hotelWrapper .hotelDetails .hotelDetailsPrice > h2 {
+  font-weight: 300;
+}
+.hotelContainer .hotelWrapper .hotelDetails .hotelDetailsPrice > button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--lightBlue);
+  color: var(--fontColor);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=hotel.scss.map */
+
+/*# sourceMappingURL=hotel.css.map */

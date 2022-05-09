@@ -1,0 +1,19 @@
+/* alignment */
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeContainer {
+  margin-top: 50px;
+  gap: 30px;
+}
+.homeContainer .homeTitle {
+  width: var(--maxWidth);
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=home.scss.map */
+
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,40 @@
+/* alignment */
+.featured {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featured {
+  position: relative;
+  width: 100%;
+  max-width: var(--maxWidth);
+  gap: 20px;
+}
+.featured .featuredItem {
+  position: relative;
+  flex: 1;
+  height: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+.featured .featuredItem .featuredImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.featured .featuredItem .featuredTitles {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.featured .featuredItem .featuredTitles h1,
+.featured .featuredItem .featuredTitles h2 {
+  border-bottom: 1px solid white;
+}
+
+/*# sourceMappingURL=featured.scss.map */
+
+/*# sourceMappingURL=featured.css.map */
