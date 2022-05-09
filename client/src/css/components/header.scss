@@ -1,8 +1,4 @@
-/* alignment */
-%alignCenter {
-  display: flex;
-  align-items: center;
-}
+@import '../variables.scss';
 
 .header {
   position: relative;

@@ -1,8 +1,6 @@
+/* alignment */
+/* colors and size */
 :root {
-  /* sizes */
-  --maxWidth: 1024px;
-
-  /* colors */
   --basicBlue: #003580;
   --lightBlue: #0071c2;
   --basicYellow: #febb02;
@@ -12,4 +10,9 @@
   --activeColor: white;
   --headerBgC: white;
   --headerC: rgb(146, 145, 145);
+  --maxWidth: 1024px;
 }
+
+/*# sourceMappingURL=variables.scss.map */
+
+/*# sourceMappingURL=variables.css.map */

@@ -1,9 +1,4 @@
-/* alignment */
-%spaceBetween {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+@import '../variables.scss';
 
 .pLists {
   @extend %spaceBetween;

@@ -1,14 +1,10 @@
-/* alignment */
-%alignCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import '../variables.scss';
 
 .navBar {
+  @extend %alignCenter;
+  justify-content: center;
   height: 50px;
   background-color: var(--basicBlue);
-  @extend %alignCenter;
 
   .navContainer {
     display: flex;

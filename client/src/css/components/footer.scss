@@ -1,10 +1,7 @@
-/* alignment */
-%spaceBetween {
-  display: flex;
-  justify-content: space-between;
-}
+@import '../variables.scss';
 
 .footer {
+  padding-top: 20px;
   width: 100%;
   max-width: var(--maxWidth);
   font-size: 12px;

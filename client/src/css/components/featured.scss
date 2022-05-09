@@ -1,13 +1,9 @@
-/* alignment */
-%spaceBetween {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+@import '../variables.scss';
 
 .featured {
   position: relative;
   @extend %spaceBetween;
+  align-items: center;
   width: 100%;
   max-width: var(--maxWidth);
   gap: 20px;

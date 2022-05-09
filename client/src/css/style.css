@@ -1,9 +1,10 @@
 /* import */
 @import './variables.css';
-/* alignment */
+/* pages */
 @import './pages/home.css';
 @import './pages/hotelLists.css';
 @import './pages/hotel.css';
+/* components */
 @import './components/nav-bar.css';
 @import './components/header.css';
 @import './components/featured.css';
@@ -12,9 +13,6 @@
 @import './components/mailLists.css';
 @import './components/searchItems.css';
 @import './components/footer.css';
-/*# sourceMappingURL=var.scss.map */
-/* pages */
-/* components */
 li {
   list-style: none;
 }

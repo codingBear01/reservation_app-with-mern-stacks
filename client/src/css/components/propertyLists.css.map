@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["propertyLists.scss"],"names":[],"mappings":"AAAA;AAMA;EACE;EACA;EACA;;;AAGF;EAEE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;;AAGF;EACE;EACA;;;AAKN","file":"propertyLists.css"}
+{"version":3,"sourceRoot":"","sources":["../variables.scss","propertyLists.scss"],"names":[],"mappings":"AAAA;AAWA;EACE;EACA;;;AAUF;AACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;AAEA;EACA;;;AAGF;AAEA;ACvCA;EAEE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;;AAGF;EACE;EACA;;;AAKN","file":"propertyLists.css"}

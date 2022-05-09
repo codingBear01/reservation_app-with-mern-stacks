@@ -1,14 +1,4 @@
-/* alignment */
-%flexCol {
-  display: flex;
-  flex-direction: column;
-}
-
-%spaceBetween {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+@import '../variables.scss';
 
 .fp {
   @extend %spaceBetween;

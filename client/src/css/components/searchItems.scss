@@ -1,13 +1,4 @@
-/* alignment */
-%spaceBetween {
-  display: flex;
-  justify-content: space-between;
-}
-
-%flexCol {
-  display: flex;
-  flex-direction: column;
-}
+@import '../variables.scss';
 
 .searchItem {
   @extend %spaceBetween;

@@ -1,12 +1,27 @@
 /* alignment */
 .featured {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
+/* colors and size */
+:root {
+  --basicBlue: #003580;
+  --lightBlue: #0071c2;
+  --basicYellow: #febb02;
+  --basicGrey: #555;
+  --basicGreen: #008009;
+  --fontColor: white;
+  --activeColor: white;
+  --headerBgC: white;
+  --headerC: rgb(146, 145, 145);
+  --maxWidth: 1024px;
+}
+
+/*# sourceMappingURL=variables.scss.map */
 .featured {
   position: relative;
+  align-items: center;
   width: 100%;
   max-width: var(--maxWidth);
   gap: 20px;
