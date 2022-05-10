@@ -1,6 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
+
 import authRoute from './routes/auth.js';
 import usersRoute from './routes/users.js';
 import hotelsRoute from './routes/hotels.js';
@@ -25,12 +28,28 @@ mongoose.connection.on('disconnected', () => {
 });
 
 /* middlewares */
+app.use(cookieParser());
+app.use(cors());
 app.use(express.json());
 
+/* routes */
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/hotels', hotelsRoute);
 app.use('/api/rooms', roomsRoute);
+
+// to handle any error occurs in any routes or api req
+app.use((err, req, res, next) => {
+  const errStatus = err.status || 500;
+  const errMsg = err.message || 'Something went wrong';
+
+  return res.status(errStatus).json({
+    success: false,
+    status: errStatus,
+    message: errMsg,
+    stack: err.stack,
+  });
+});
 
 app.listen(8800, () => {
   connect();

@@ -1,77 +1,33 @@
+import useFetch from './../../hooks/useFetch';
+
 const FeaturedProperties = () => {
+  const { data, loading, error } = useFetch('/hotels?featured=true&limit=4');
+
   return (
     <>
       <div className="fp">
-        <div className="fpItem">
-          <img
-            className="fpImg"
-            src="https://image.goodchoice.kr/resize_1000X500x0/adimg_new/57166/0/4e6a7446d82f7a7ef524a0125666159d.jpg"
-            alt="homes"
-          />
-          <span className="fpName">Gwangali Guest House</span>
-          <span className="fpCity">Busan</span>
-          <span className="fpPrice">Staring from $100</span>
-          <div className="fpRating">
-            <button>6.9</button>
-            <span>Excellent</span>
-          </div>
-        </div>
-        <div className="fpItem">
-          <img
-            className="fpImg"
-            src="https://image.goodchoice.kr/resize_1000X500x0/adimg_new/57166/0/4e6a7446d82f7a7ef524a0125666159d.jpg"
-            alt="homes"
-          />
-          <span className="fpName">Gwangali Guest House</span>
-          <span className="fpCity">Busan</span>
-          <span className="fpPrice">Staring from $100</span>
-          <div className="fpRating">
-            <button>6.9</button>
-            <span>Excellent</span>
-          </div>
-        </div>
-        <div className="fpItem">
-          <img
-            className="fpImg"
-            src="https://image.goodchoice.kr/resize_1000X500x0/adimg_new/57166/0/4e6a7446d82f7a7ef524a0125666159d.jpg"
-            alt="homes"
-          />
-          <span className="fpName">Gwangali Guest House</span>
-          <span className="fpCity">Busan</span>
-          <span className="fpPrice">Staring from $100</span>
-          <div className="fpRating">
-            <button>6.9</button>
-            <span>Excellent</span>
-          </div>
-        </div>
-        <div className="fpItem">
-          <img
-            className="fpImg"
-            src="https://image.goodchoice.kr/resize_1000X500x0/adimg_new/57166/0/4e6a7446d82f7a7ef524a0125666159d.jpg"
-            alt="homes"
-          />
-          <span className="fpName">Gwangali Guest House</span>
-          <span className="fpCity">Busan</span>
-          <span className="fpPrice">Staring from $100</span>
-          <div className="fpRating">
-            <button>6.9</button>
-            <span>Excellent</span>
-          </div>
-        </div>
-        <div className="fpItem">
-          <img
-            className="fpImg"
-            src="https://image.goodchoice.kr/resize_1000X500x0/adimg_new/57166/0/4e6a7446d82f7a7ef524a0125666159d.jpg"
-            alt="homes"
-          />
-          <span className="fpName">Gwangali Guest House</span>
-          <span className="fpCity">Busan</span>
-          <span className="fpPrice">Staring from $100</span>
-          <div className="fpRating">
-            <button>6.9</button>
-            <span>Excellent</span>
-          </div>
-        </div>
+        {loading ? (
+          'Now Loading, Please Wait'
+        ) : (
+          <>
+            {data.map((item, i) => (
+              <div key={item._id} className="fpItem">
+                <img className="fpImg" src={item.photos[0]} alt="homes" />
+                <span className="fpName">{item.name}</span>
+                <span className="fpCity">{item.city}</span>
+                <span className="fpPrice">
+                  Staring from ${item.cheapestPrice}
+                </span>
+                {item.rating && (
+                  <div className="fpRating">
+                    <button>{item.rating}</button>
+                    <span>Excellent</span>
+                  </div>
+                )}
+              </div>
+            ))}
+          </>
+        )}
       </div>
     </>
   );

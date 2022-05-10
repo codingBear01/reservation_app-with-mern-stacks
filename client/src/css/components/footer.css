@@ -4,8 +4,8 @@
   justify-content: space-between;
 }
 
+/* colors and size */
 :root {
-  /* colors */
   --basicBlue: #003580;
   --lightBlue: #0071c2;
   --basicYellow: #febb02;
@@ -15,11 +15,9 @@
   --activeColor: white;
   --headerBgC: white;
   --headerC: rgb(146, 145, 145);
-  /* sizes */
   --maxWidth: 1024px;
 }
 
-/*# sourceMappingURL=var.scss.map */
 /*# sourceMappingURL=variables.scss.map */
 .footer {
   padding-top: 20px;
@@ -38,6 +36,10 @@
   margin-bottom: 10px;
   color: var(--basicBlue);
   cursor: pointer;
+}
+.footer .fLists .fList .fListItem:hover {
+  color: #cc0000;
+  transition: color 0.2s linear;
 }
 .footer .fText {
   text-align: center;

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -12,6 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
+import { SearchContext } from '../../context/SearchContext';
 
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
@@ -19,7 +20,7 @@ import 'react-date-range/dist/theme/default.css';
 const Header = ({ type }) => {
   const [destination, setDestination] = useState('');
   const [openDate, setOpenDate] = useState(false);
-  const [date, setDate] = useState([
+  const [dates, setDates] = useState([
     {
       startDate: new Date(),
       endDate: new Date(),
@@ -55,10 +56,13 @@ const Header = ({ type }) => {
     });
   }, []);
 
+  const { dispatch } = useContext(SearchContext);
+
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    navigate('hotel-lists', { state: { destination, date, options } });
+    dispatch({ type: 'NEW_SEARCH', payload: { destination, dates, options } });
+    navigate('hotel-lists', { state: { destination, dates, options } });
   };
 
   return (
@@ -122,15 +126,15 @@ const Header = ({ type }) => {
                     onClick={onClickOpenCalendar}
                     className="headerSearchTxt"
                   >
-                    {`${format(date[0].startDate, 'yyyy/MM/dd')}`} to{' '}
-                    {`${format(date[0].endDate, 'yyyy/MM/dd')}`}
+                    {`${format(dates[0].startDate, 'yyyy/MM/dd')}`} to{' '}
+                    {`${format(dates[0].endDate, 'yyyy/MM/dd')}`}
                   </span>
                   {openDate && (
                     <DateRange
                       className="date"
-                      onChange={(item) => setDate([item.selection])}
+                      onChange={(item) => setDates([item.selection])}
                       minDate={new Date()}
-                      ranges={date}
+                      ranges={dates}
                       editableDateInputs={true}
                       moveRangeOnFirstSelection={false}
                     />

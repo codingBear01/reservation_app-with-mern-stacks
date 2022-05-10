@@ -19,6 +19,11 @@
         color: var(--basicBlue);
         cursor: pointer;
       }
+
+      .fListItem:hover {
+        color: rgb(204, 0, 0);
+        transition: color 0.2s linear;
+      }
     }
   }
 
