@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from './../../context/compare';
 
 const NavBar = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <>
       <div className="navBar">
@@ -8,10 +12,14 @@ const NavBar = () => {
           <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
             <span className="logo">Booking Booking</span>
           </Link>
-          <div className="navItems">
-            <button className="navBtn">Register</button>
-            <button className="navBtn">Login</button>
-          </div>
+          {user ? (
+            user.username
+          ) : (
+            <div className="navItems">
+              <button className="navBtn">Register</button>
+              <button className="navBtn">Login</button>
+            </div>
+          )}
         </div>
       </div>
     </>

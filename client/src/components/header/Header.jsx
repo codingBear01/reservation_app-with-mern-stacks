@@ -13,6 +13,7 @@ import {
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
 import { SearchContext } from '../../context/SearchContext';
+import { AuthContext } from './../../context/compare';
 
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
@@ -33,6 +34,11 @@ const Header = ({ type }) => {
     children: 0,
     rooms: 1,
   });
+
+  const navigate = useNavigate();
+
+  const { dispatch } = useContext(SearchContext);
+  const { user } = useContext(AuthContext);
 
   const onClickOpenCalendar = useCallback(
     () => setOpenDate((prevDate) => !prevDate),
@@ -55,10 +61,6 @@ const Header = ({ type }) => {
       };
     });
   }, []);
-
-  const { dispatch } = useContext(SearchContext);
-
-  const navigate = useNavigate();
 
   const handleSearch = () => {
     dispatch({ type: 'NEW_SEARCH', payload: { destination, dates, options } });
@@ -105,7 +107,7 @@ const Header = ({ type }) => {
                 Get rewarded for your travels – unlock instant savings of 10% or
                 more with a free Lamabooking account
               </p>
-              <button className="headerBtn">Sign in / Register</button>
+              {!user && <button className="headerBtn">Sign in / Register</button>}
 
               <div className="headerSearch">
                 <div className="headerSearchItem">
