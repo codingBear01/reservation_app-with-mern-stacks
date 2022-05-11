@@ -13,7 +13,7 @@ import {
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
 import { SearchContext } from '../../context/SearchContext';
-import { AuthContext } from './../../context/compare';
+import { AuthContext } from './../../context/AuthContext';
 
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
@@ -107,7 +107,9 @@ const Header = ({ type }) => {
                 Get rewarded for your travels – unlock instant savings of 10% or
                 more with a free Lamabooking account
               </p>
-              {!user && <button className="headerBtn">Sign in / Register</button>}
+              {!user && (
+                <button className="headerBtn">Sign in / Register</button>
+              )}
 
               <div className="headerSearch">
                 <div className="headerSearchItem">

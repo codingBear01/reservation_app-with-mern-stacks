@@ -8,7 +8,7 @@ import MailLists from './../../components/mailLists/MailLists';
 import Footer from './../../components/footer/Footer';
 import Reserve from './../../components/reserve/Reserve';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { AuthContext } from './../../context/compare';
+import { AuthContext } from './../../context/AuthContext';
 import {
   faCircleArrowLeft,
   faCircleArrowRight,
@@ -42,20 +42,17 @@ const Hotel = () => {
     setOpenSlider(true);
   }, []);
 
-  const handleChangeImg = useCallback(
-    (direction) => {
-      let newSliderNum;
+  const handleChangeImg = useCallback((direction) => {
+    let newSliderNum;
 
-      if (direction === 'l') {
-        newSliderNum = sliderNum === 0 ? data.photos.length - 1 : sliderNum - 1;
-      } else {
-        newSliderNum = sliderNum === data.photos.length - 1 ? 0 : sliderNum + 1;
-      }
+    if (direction === 'l') {
+      newSliderNum = sliderNum === 0 ? data.photos.length - 1 : sliderNum - 1;
+    } else {
+      newSliderNum = sliderNum === data.photos.length - 1 ? 0 : sliderNum + 1;
+    }
 
-      setSliderNum(newSliderNum);
-    },
-    [sliderNum]
-  );
+    setSliderNum(newSliderNum);
+  }, []);
 
   const handleOpenReserveModal = () => {
     if (user) {
